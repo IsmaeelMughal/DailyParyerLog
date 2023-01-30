@@ -2,6 +2,8 @@ package com.example.prayerlog;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -16,8 +18,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     EditText prayerName, prayerDate, numberOfRakats;
     CheckBox isPray, isBajamat;
-    Button addBtn;
+    Button addBtn, gitBtn;
     ListView listView;
+
 
     DbHandler db;
 
@@ -37,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
 
         db = new DbHandler(this);
         RefreshGrid();
+
+        gitBtn = findViewById(R.id.gitBtn);
+
+        gitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://github.com/IsmaeelMughal/DailyParyerLog/commits/master";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
