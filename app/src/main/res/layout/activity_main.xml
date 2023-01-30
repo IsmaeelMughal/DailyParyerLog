@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/prayerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NameOfPrayer"
+        android:inputType="text"
+        android:maxLines="1"
+        android:minHeight="48dp" />
+    <EditText
+        android:id="@+id/prayerDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:inputType="text"
+        android:maxLines="1"
+        android:minHeight="48dp" />
+    <EditText
+        android:id="@+id/numOfRakats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number Of Rakats"
+        android:inputType="number"
+        android:maxLines="1"
+        android:minHeight="48dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/yesNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <CheckBox
+            android:id="@+id/bajamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With Jamat" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BtnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD LOG" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
